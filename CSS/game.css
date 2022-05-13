@@ -1,0 +1,114 @@
+body {
+	margin: 0;
+	padding: 0;
+    background-color: darkslategray;
+}
+
+header {
+	background-color: rgb(34, 58, 58);
+	color: goldenrod;
+	text-align: center;
+	height: 60px;
+	padding-top: 5px;
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 60px;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+}
+
+p {
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: Sans;
+	text-align: center;
+	position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+a {
+	color: goldenrod;
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(210, 151, 3);
+}
+a:visited {
+	color: darkslategray;
+}
+
+/* ****************** Table style ****************** */
+#tab-tic-tac-toe {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	font-size: 4em;
+	font-family: Sans;
+	color: #444;
+	background:rgb(34, 58, 58);
+	width: 310px;
+	height: 300px;
+	text-align: center;
+	vertical-align: center;
+	border: 1px solid rgb(34, 58, 58);
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgb(34, 58, 58);
+}
+
+/*Column style*/
+#tab-tic-tac-toe td {
+	border-collapse:collapse;
+	border-left: 5px solid #ffffff;
+	border-bottom: 5px solid #fffcfc;
+}
+
+#tab-tic-tac-toe td:first-child {
+	border-left: none;
+}
+
+#tab-tic-tac-toe tr:last-child td {
+	border-bottom: none;
+}
+
+/*Cells*/
+#tab-tic-tac-toe td {
+	cursor: pointer;
+	height: 95px;
+	width: 95px;
+}
+
+#tab-tic-tac-toe td:hover {
+	background:goldenrod;
+}
+
+/* ****************** Restart Button ****************** */
+#btn-restart {
+	display: block;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	background:goldenrod;
+	font-size: 1.5em;
+	color: darkslategray;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#btn-restart:hover {
+	background:rgb(210, 151, 3);
+}
+
+#btn-restart:active {
+	background:gold;
+}
+
+#btn-restart:disabled {
+	color: #444;
+	background: goldenrod;
+}
