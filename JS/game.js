@@ -4,11 +4,21 @@ var board=[
     [0, 0, 0]
 ]
 
-const ME = 1
-const AI = -1
+const ME = -1
+const AI = 1
 
-function evalute() {
-    dd
+function evalute(state) {
+    var score = 0
+
+    if (gameOver(state, AI)) {
+        score = +1
+    } else if (gameOver(state, ME)) {
+        score = -1
+    } else {
+        score = 0
+    }
+
+    return score
 }
 
 function gameOver(state, player) {
@@ -42,7 +52,7 @@ function gameOver(state, player) {
 }
 
 function gameOverAll() {
-    dd
+    return gameOver(state, AI) || gameOver(state, ME)
 }
 
 function emptyCells(state) {
@@ -106,8 +116,16 @@ function minmax(state, depth, player) {
         score[1] = y
 
         if (player == AI) {
-            
+            if (score[2] > best[2]) {
+                best = score
+            } else {
+                if (score[2] < best[2]) {
+                    best = score
+                }
+            }
         }
+
+        return best;
     })
 }
 
@@ -116,5 +134,9 @@ function aiTurn() {
 }
 
 function clickedCell() {
+    dd
+}
+
+function restartBtn() {
     dd
 }
