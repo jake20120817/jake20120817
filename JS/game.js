@@ -189,11 +189,11 @@ function clickedCell(cell) {
 		}
 
 		msg = document.getElementById("message");
-		msg.innerHTML = "You lose!";
+		msg.innerHTML = "O";
 	}
 	if (emptyCells(board).length == 0 && !gameOverAll(board)) {
 		var msg = document.getElementById("message");
-		msg.innerHTML = "Draw!";
+		msg.innerHTML = "O X";
 	}
 	if (gameOverAll(board) == true || emptyCells(board).length == 0) {
 		button.value = "Restart";
