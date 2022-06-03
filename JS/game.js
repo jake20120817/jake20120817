@@ -130,13 +130,98 @@ function minmax(state, depth, player) {
 }
 
 function aiTurn() {
-    dd
+    var x, y
+    var move
+    var cell
+
+    if (emptyCells(board).length == 9) {
+        x = parseInt(Math.random() * 3)
+        y = parseInt(Math.random() * 3)
+    } else {
+        move = minmax(board, emptyCells(board), length, AI)
+    }
+
+    if (setMove(x, y, AI)) {
+        cell = document.getElementById(String(x) + String(y))
+        cell.innerHTML = "O"
+    }
 }
 
-function clickedCell() {
-    dd
+function clickedCell(cell) {
+    var button = document.getElementById("btn-restart")
+    button.disalbed = true
+    var condition = gameOverAll(board) == false && emptyCells(board).length > 0
+}
+
+if (condition == true) {
+    var x = cell.split("")[0]
+    var x = cell.split("")[1]
+    var move = setMove(x, y, ME)
+
+    if (move =true) {
+        cell.innerHTML = "x"
+        if (condition) {
+            aiTurn()
+        }
+    }
+
+    if (gameOver(board, AI)) {
+        var lines
+        var cell
+        var msg
+
+        if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 0], [0, 1], [0, 2]]
+        } else if (board[1][0] == 1 && board[1][1] == 1 && board[1][2] == 1) {
+            lines = [[1, 0], [1, 1], [1, 2]]
+        } else if (board[2][0] == 1 && board[2][1] == 1 && board[2][2] == 1) {
+            lines = [[2, 0], [2, 1], [2, 2]]
+        } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 0], [1, 0], [2, 0]]
+        } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 1], [1, 1], [2, 1]]
+        } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 2], [1, 2], [2, 2]]
+        } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 0], [1, 1], [2, 2]]
+        } else if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1) {
+            lines = [[0, 2], [1, 1], [2, 0]]
+        }
+
+        for (var i = 0; i < lines.length; i++) {
+            cell = document.getElementById(String(lines[i][0]) + String(lines[i][1]))
+            cell.style.color = "red"
+        }
+
+        mag = document.getElementById("message")
+        msg.innerHTML = "O"
+    }
+
+    if (emptyCells(board).length == 0 && !gameOverAll(board)) {
+        msg = document.getElementById("message")
+        msg.innerHTML = "O X"
+    }
+
+    if (gameOverAll(board) == true || emptyCells(board.length == 0)) {
+        button.value = "One more time"
+        button.disalbed = false
+    }
 }
 
 function restartBtn() {
-    dd
+    if (button.value == "OK") {
+        aiTurn()
+        button.disalbed = true
+    } else if (button.value =="One more time") {
+        var himlBoard
+        var msg
+        for (var x = 0; x < 3; x++) {
+            for (var y = 0; y < 3; y++) {
+                board[x][y] = 0
+                htmlBoard = document.getElementById(String(x) + String(y))
+                htmlBoard.style.color = "goldenrod"
+                htmlBoard.innerHTML = ""
+            }
+        }
+    }
 }
