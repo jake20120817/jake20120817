@@ -1,78 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="python">
-    <meta name="author" content="이재익">
-
-    <link rel="stylesheet" href="CSS/style.css">
-
-    <title>python</title>
-
-    <style>
-      h1 {
-        color: greenyellow;
-        background-color: rgb(0, 0, 0);
-      }
-      h2 {
-        color: greenyellow;
-      }
-      p {
-        color: greenyellow;
-      }
-      li {
-        color: greenyellow;
-      }
-      a:visited {
-        color: greenyellow;
-      }
-      a:link {
-        color: greenyellow;
-      }
-      #header {
-        background-color: rgb(0, 0, 0);
-      }
-      .subtitle {
-        color: greenyellow;
-      }
-    </style>
+  <title>Python</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/introduce.css" type="text/css">
 </head>
-<body style="background-color: rgb(0, 0, 0);">
-    <div id="container">
-        <div id="header">
-          <h1>파이썬</h1>
-        </div>
-        <div id="content">
-          <h2 class="subtitle">제작자</h2>
-          <p> 이재익(李在翊) 2012 8/17에 태어났습니다. 2022 6/17 (금) oo:oo에 제작했습니다. Ctrl + Shift + C를 눌러주어서 제 정성이 담긴 코드를 봐주세요.</p>
-          <img src="img/jake python.jpg"width="540px"height="302px"alt="파이썬 코드 사진입니다.">
-          <div id="jake">
-            <p></p>
-          </div>
-        </div>
-        <div id="sidebar">
-          <h2 class="subtitle">더 많은 코딩 경험</h2>
-          <ol>
-            <li><a href="https://jake20120817.github.io/jake20120817/j_illustrate.html" target="_blank" title="j illustrate">j illustrate</a></li>
-            <p></p>
-            <li><a href="https://github.com/jake20120817" target="_blank" title="github">github</a></li>
-            <p></p>
-            <li><a href="scratch.html" target="_blank" title="scratch">scratch</a></li>
-            <p></p>
-            <li><a href="interpreter.html" target="_blank" title="interpreter">interpreter</a></li>
-            <p></p>
-            <li><a href="micro bit.html" target="_blank" title="micro bit">micro:bit</a></li>
-            <p></p>
-            <li><a href="python.html" target="_blank" title="python">python</a></li>
-            <p></p>
-            <li><a href="web.html" target="_blank" title="web">웹 프로그래밍</a></li>
-            <p></p>
-          </ol>
-        </div>
-        <div id="footer">
-          <p> 이 사이트는 전체 이용 가능 합니다. 다른 경험을 보거나 정식 사이트에 들어가고 싶다면 '더 많은 코딩 경험에서 해주시기 바랍니다.</p>
-          <p> 다른 사이트 업데이트 목록 : </p><li><a href="https://jake20120817.github.io/jake20120817/game.html" target="_blank" title="tic tac toe 가기">tic tac toe</a></li>
-        </div>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="index.html">파이썬 코딩 경험</a></h1>
+      <h2>파이썬에 대해선 이런 것들을 배웠어요!</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="scratch.html">Scratch</a></li>
+        <li><a href="ev3.html">EV3</a></li>
+        <li><a href="mirco-bit.html">Micro-bit</a></li>
+        <li><a href="python.html">Python</a></li>
+        <li class="last"><a href="web.html">Web</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <div id="homepage" class="clear">
+      <div class="left_section">
+        <article>
+          <h1>파이썬과 마이크로비트로 만든 농구대 소개 영상</h1>
+          <p></p>
+          <p></p>
+        </article>
+        <video src = "video/jake.MP4" controls width="340" height = "170" autoplay = "autoplay" muted = "muted"></video>
       </div>
+      <div id="code">
+        <h1>파이썬 코드 소개</h1>
+        <br></dr>
+        <img src="img/jake python.jpg"width="475px"height="237px"alt="파이썬 코드 사진입니다.">
+      </div>
+      <div class="right_section">
+        <article class="clear">
+              <p>파이썬은 제가 6살 때부터 9살 초반까지는 앤트리, 스크래치, S4A 등 블럭 코딩 위주로 하였지만 9살 중반 쯤부터 직접 쓰는 코딩 파이썬에 접하였습니다. 9살 중반 때 접하였던 파이썬은 혼자서 했습니다. 제가 이 말을 적은 이유는 사실 처음으로 접하였던 파이썬은 8살 가을 쯤에서 아빠랑 같이 해보았습니다. 하지만 그때는 제대로 배우는 것은 아빠였고, 저는 단지 출력하는 명령문 'print("(쓰고 싶은 말)")' 밖에는 귀에 잘 안 들어오고 심지어 아빠가 더 열심히 할 정도였는데.. 그 때 제가 원래 나이 제한에 걸려 못했던 파이썬이 이제 나이 제한에 안 걸린다는 생각으로 엄마에게 '이제 나이 제한이 걸리지 않아.'라고 하여 지금은 C언어를 걸쳐 웹 프로그래밍을 하고 있습니다. 그렇지만 저의 코딩 사연은 아주 길어 지금까지 쓴 글의 세 배입니다. 하지만 그 중 1/3 정도 밖에 안 쓴 격이지요. 전 위례에서 살았습니다. 이사 간 사연은 저의 부모님이 산 집이 그때까지 안 지어져 있었기 때문입니다. 그렇고 그렇게 해서 어떻게 되었는데 전 유치원만 다니고 바로 또 이사를 해 신도시에서 삽니다. 또 그렇고 그렇게 해서 첫 번째 코딩학원, c큐브 코딩학원에 다니는데 하지만 제가 받던 수업을 가르치셨던 선생님 즉, 원장 선생님께서 미국에 가신다고 하셔 저는 속상했는데 그렇고 그렇게해서 진짜 집에 이사를 간 곳이 바로 제가 지금 살고 있는 집입니다. 하지만 그 전에 미리 제가 지금 살고 있는 집과  가까운 코딩학원이 바로 지금 제가 다니고 있는 학원입니다.</p>
+              <footer class="more"><a href="#">파이썬에 대해 더 알아보기 &raquo;</a></footer>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Copyright -->
+<div class="wrapper row4">
+  <footer id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
 </body>
 </html>
