@@ -1,18 +1,18 @@
 body{
     margin: 0px;
-    padding: 0px;
-    background-color: darkslategray;
-}
-
-h1{
+    padding : 0px;
+    background : darkslategray;
+  }
+  
+  h1{
     color: #fff;
     text-align: center;
-    font-family: Arial;
-    font-weight: normal;
+    font-family: 'Arial';
+    font-weight: lighter;
     margin: 2em auto 0px;
     padding-bottom: 60px;
-}
-.outer-screen{
+  }
+  .outer-screen{
     background: #13202c;
     width: 900px;
     height: 540px;
@@ -22,9 +22,9 @@ h1{
     -webkit-border-radius: 20px;
     position: relative;
     padding-top: 35px;
-}
-
-.outer-screen:before{
+  }
+  
+  .outer-screen:before{
     content: "";
     background: #3e4a53;
     border-radius: 50px;
@@ -36,8 +36,8 @@ h1{
     z-index: 9999;
     width: 50px;
     height: 50px;
-}
-.outer-screen:after{
+  }
+  .outer-screen:after{
     content: "";
     background: #ecf0f1;
     width: 900px;
@@ -47,13 +47,13 @@ h1{
     border-radius: 0px 0px 20px 20px;
     -moz-border-radius: 0px 0px 20px 20px;
     -webkit-border-radius: 0px 0px 20px 20px;
-}
-
-.stand{
+  }
+  
+  .stand{
     position: relative;  
-}
-
-.stand:before{
+  }
+  
+  .stand:before{
     content: "";
     position: absolute;
     bottom: -150px;
@@ -64,9 +64,9 @@ h1{
     left: 0px;
     right: 0px;
     margin: auto;
-}
-
-.stand:after{
+  }
+  
+  .stand:after{
     content: "";
     position: absolute;
     width: 260px;
@@ -78,28 +78,28 @@ h1{
     border-right: 30px solid transparent;
     bottom: -180px;
     box-shadow: 0px 4px 0px #7e7e7e
-}
-
-.inner-screen{
+  }
+  
+  .inner-screen{
     width: 800px;
     height: 340px;
+    background: darkslategray;
     margin: 0px auto;
     padding-top: 80px;
-}
-
-.form{
+  }
+  
+  .form{
     width: 400px;
-    height: 270px;
+    height: 500px;
     background: #edeff1;
     margin: 0px auto;
     padding-top: 20px;
     border-radius: 10px;
     -moz-border-radius: 10px;
-    border: 2px solid darkslategray;
     -webkit-border-radius: 10px;
-}
-
-input[type="text"]{
+  }
+  
+  input[type="text"]{
     display: block;
     width: 309px;
     height: 35px;
@@ -108,18 +108,18 @@ input[type="text"]{
     border: 0px;
     padding: 5px;
     font-size: 16px;
-    border: 2px solid #fff;
+     border: 2px solid #fff;
     transition: all 0.3s ease;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-}
+  }
+  
+  input[type="text"]:focus{
+    border: 2px solid darkslategray;
+  }
 
-input[type="text"]:focus{
-    background-color: darkslategray;
-}
-
-input[type="password"]{
+  input[type="password"]{
     display: block;
     width: 309px;
     height: 35px;
@@ -128,38 +128,79 @@ input[type="password"]{
     border: 0px;
     padding: 5px;
     font-size: 16px;
-    border: 2px solid #fff;
+     border: 2px solid #fff;
     transition: all 0.3s ease;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-}
+  }
+  
+  input[type="password"]:focus{
+    border: 2px solid darkslategray
+  }
 
-input[type="password"]:focus{
-    background-color: darkslategray;
-}
-
-button{
-    background: rgb(84, 128, 128);
+  input[type="email"]{
     display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+  
+  input[type="email"]:focus{
+    border: 2px solid darkslategray;
+  }
+
+  input[type="date"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+  
+  input[type="date"]:focus{
+    border: 2px solid darkslategray;
+  }
+  
+  button{
+    display: block;
+    background: darkslategray;
     width: 314px;
     padding: 12px;
     cursor: pointer;
     color: #fff;
     border: 0px;
     margin: auto;
+    margin-top: 40px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     font-size: 17px;
     transition: all 0.3s ease;
-}
-
+  }
+  
 button:hover{
-    background: darkslategray;
-}
-
-a{
+    background: rgb(37, 62, 62);
+  }
+  
+  a{
     text-align: center;
     font-family: Arial;
     color: gray;
@@ -168,25 +209,25 @@ a{
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 12px;
-}
-
-a:hover{
-    color: rgb(8, 28, 28);
-}
-
-
-::-webkit-input-placeholder {
-    color: gray;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-    color: gray;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-    color: gray;  
-}
-
-:-ms-input-placeholder {  
-    color: gray;  
-}
+  }
+  
+  a:hover{
+    color: darkslategray;
+  }
+  
+  
+  ::-webkit-input-placeholder {
+     color: gray;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+     color: gray;  
+  }
+  
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: gray;  
+  }
+  
+  :-ms-input-placeholder {  
+     color: gray;  
+  }
