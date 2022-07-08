@@ -15,17 +15,22 @@ function onRegisterButtonClick(event) {
 
     const userID = registerID.value
     const userPassword = registerPassword.value
+    const userPasswordCheck = registerPasswordCheck.value
+    const userName = registerName.value
 
     if (userID === "") {
-        alert("아이디")
-    } else if (userPassword !== userPasswordCheck){
-        alert("")
+        alert("아이디를 입력하세요.")
+    } else if (userPassword !== userPasswordCheck) {
+        alert("비밀번호가 같지 않습니다.")
     } else if (userPassword.length < 6) {
-        alert("")
+        alert("비밀번호는 6글자 이상 입력해주세요.")
     } else if (userName === "") {
-        alert("")
+        alert("이름을 입력하세요.")
     } else {
-        alert("")
+        localStorage.setItem(USER_ID_KEY, userID)
+        localStorage.setItem(USER_PASSWORD_KEY, userPassword)
+        alert("회원가입 성공!!!!")
+        window.location.href = "login.html"
     }
 }
 

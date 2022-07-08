@@ -3,21 +3,25 @@ const idInput = document.querySelector("#login-form #id")
 const passwordInput = document.querySelector("#login-form #password")
 const button = document.querySelector("#button")
 
+const USER_ID_KEY = "userID"
+const USER_PASSWORD_KEY = "userPassword"
+
 function onLoginButtonClick(event) {
     event.preventDefault()
 
     const id = idInput.value
     const password = passwordInput.value
 
-    console.log(id)
-    console.log(password)
+    const savedUserID = localStorage.getItem(USER_ID_KEY)
+    const savedUserPassword = localStorage.getItem(USER_PASSWORD_KEY)
+    
 
-    if (id === "jake081717J" && password === "081717J") {
-        alert("로그인 완료")
+    if (id === savedUserID && password === savedUserPassword) {
+        alert("로그인 성공!!!!")
         window.location.href = "j_illustrate.html"
     } else {
-        alert("로그인 실패")
-    }
+        alert("로그인 실패....")
+    }  
 }
 
 button.addEventListener("click", onLoginButtonClick)
